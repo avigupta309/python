@@ -1,11 +1,34 @@
-num=int(input("Enter any number : "))
-num2=int(input("Enter any number : "))
+import random
+def GameStart(num):
+ points=0
+ while True:
+      operator=['+',"-","*","//","%"]
+      number1=random.randint(1,num)
+      number2=random.randint(1,num)
+      op=random.choice(operator)
+      userAns=int(input(f"{number1} {op} {number2} = "))
+      result=0
+      match(op):
+         case '+':
+            result=number1+number2
+         case '-':
+            result=number1-number2
+         case '*':
+            result=number1*number2
+         case '//':
+            result=number1//number2
+         case '%':
+            result=number1%number2
+         case _:
+            print("Something Went Wrong ")
+      if userAns==result:
+         points+=1
+      else:
+        print(f"You Miss The Game !!\n with Points : {points}")
+        print(f"The Correct Answer Is : {result}")
+        break
+        
+         
 
-for i in range(num2,num):
-    prime=True
-    for j in range(2,int(i**0.5)+1):
-        if i%j==0:
-            prime=False
-            break
-    if prime:
-        print(i)    
+number=int(input("Enter Any Number : "))
+GameStart(number)

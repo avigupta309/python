@@ -33,3 +33,17 @@ def BubbleSorting(array):
 
 array=[1,7,9,2,5,3,4]
 BubbleSorting(array)
+
+
+def insertionSort(array):
+    num=len(array)
+    for i in range(1,num):
+        key=array[i]
+        j=i-1
+        while j>=0 and key<array[j]:
+            array[j+1]=array[j]
+            j-=1
+        array[j+1]=key
+    print(array)
+array=[11,5,7,1,4,9]
+insertionSort(array)
