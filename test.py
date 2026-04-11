@@ -1,6 +1,7 @@
 num=int(input("Enter any number : "))
+num2=int(input("Enter any number : "))
 
-for i in range(2,num):
+for i in range(num2,num):
     prime=True
     for j in range(2,int(i**0.5)+1):
         if i%j==0:
