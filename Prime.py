@@ -57,3 +57,6 @@ start=int(input("Enter Starting Number : "))
 end=int(input("Enter Ending Number : "))
 primeRangeNumber(start,end)
 
+
+
+print("prime message")
