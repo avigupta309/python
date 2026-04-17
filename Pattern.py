@@ -22,3 +22,8 @@ for i in range(1,bulletRow+1):
     print(" "*(bulletRow-i)+"B"*(i*2-1))
 for j in range(bulletRow):
     print("B"*(bulletRow*2))
+
+
+
+
+print("Patter message")
