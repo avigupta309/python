@@ -10,3 +10,6 @@ with open('file.txt', "a") as file:
             file.write(f"{n} * {i} = {n*i}\n")
 
         file.write("\n")
+
+
+print ("message in table ")

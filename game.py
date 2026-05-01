@@ -1,4 +1,10 @@
 import random
+
+name=input("Enter Your Name :").upper().strip() 
+points,level=0,0
+operator=['+',"-","*","//","%"]
+numberRange=int(input("Enter the Number Range : "))
+
 operations={
          '+': lambda a,b :a+b,
          '-':lambda a,b:a-b,
@@ -10,12 +16,9 @@ operations={
 def calculateResult(op,num1,num2):
   return operations[op](num1,num2)
 
-
 def generateQuestion():
-   name=input("Enter Your Name :").upper().strip() 
-   numberRange=int(input("Enter the Number Range : "))
-   operator=['+',"-","*","//","%"]
-   points,level=0,0
+   global name,points,operator,level,numberRange
+
    while True:
       op=random.choice(operator)
       num1=random.randint(1,numberRange)
@@ -41,6 +44,8 @@ def generateQuestion():
          user=input("Want to Continue The Game : (yes/no) ? ").lower()
          if user=="no":
             break 
+         numberRange+=5
+         
 
       
 generateQuestion()
